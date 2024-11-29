@@ -5,33 +5,36 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 5.0f;
     public float rotationSpeed = 10.0f;
 
-    private Rigidbody2D rb;
-    private Vector2 movement;
+    private Rigidbody2D _rb;
+    private Vector2 _movement;
 
-    void Start()
+    public bool CanMove { get; set; } = true;
+
+
+    private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        _rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    private void Update()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
-
-        movement = new Vector2(moveHorizontal, moveVertical).normalized;
-    }
-
-    void FixedUpdate()
-    {
-        rb.linearVelocity = movement * moveSpeed;
-
-        if (movement != Vector2.zero)
+        if (!CanMove)
         {
-            float targetAngle = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg - 90f;
-
-            float angle = Mathf.LerpAngle(rb.rotation, targetAngle, rotationSpeed * Time.fixedDeltaTime);
-
-            rb.rotation = angle;
+            _movement = Vector2.zero;
+            return;
         }
+
+        var moveHorizontal = Input.GetAxis("Horizontal");
+        var moveVertical = Input.GetAxis("Vertical");
+        _movement = new Vector2(moveHorizontal, moveVertical).normalized;
+    }
+
+    private void FixedUpdate()
+    {
+        _rb.linearVelocity = _movement * moveSpeed;
+        if (_movement == Vector2.zero) return;
+        var targetAngle = Mathf.Atan2(_movement.y, _movement.x) * Mathf.Rad2Deg - 90f;
+        var angle = Mathf.LerpAngle(_rb.rotation, targetAngle, rotationSpeed * Time.fixedDeltaTime);
+        _rb.rotation = angle;
     }
 }
