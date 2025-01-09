@@ -1,0 +1,728 @@
+fileFormatVersion: 2
+guid: 8458c51e594806042937223fc3de4bf8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 326182069040782643
+    second: Mail_0
+  - first:
+      213: 1733773634841944637
+    second: Mail_1
+  - first:
+      213: -3172629147622731660
+    second: Mail_2
+  - first:
+      213: -36084020594112620
+    second: Mail_3
+  - first:
+      213: 5973291134881104414
+    second: Mail_4
+  - first:
+      213: -8099960023834195417
+    second: Mail_5
+  - first:
+      213: -4036443988549284847
+    second: Mail_6
+  - first:
+      213: -237125457011737125
+    second: Mail_7
+  - first:
+      213: 4776459579768175117
+    second: Mail_8
+  - first:
+      213: -9188252990094506850
+    second: Mail_9
+  - first:
+      213: -3140091255708586397
+    second: Mail_10
+  - first:
+      213: -3495411900871241887
+    second: Mail_11
+  - first:
+      213: -5648243790852307231
+    second: Mail_12
+  - first:
+      213: 6341563594266099146
+    second: Mail_13
+  - first:
+      213: 4341809778557598090
+    second: Mail_14
+  - first:
+      213: 8581774565409753904
+    second: Mail_15
+  - first:
+      213: -4644831216905705753
+    second: Mail_16
+  - first:
+      213: -8720555212177641178
+    second: Mail_17
+  - first:
+      213: -2921379094512787459
+    second: Mail_18
+  - first:
+      213: -2955652898264057636
+    second: Mail_19
+  - first:
+      213: -5353199371992173404
+    second: Mail_20
+  - first:
+      213: 8755302769421540184
+    second: Mail_21
+  - first:
+      213: -1257571596746008717
+    second: Mail_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Mail_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 873
+        width: 800
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33d17451dd4d68400800000000000000
+      internalID: 326182069040782643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mail_1
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 910
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3221b95fe99f0810800000000000000
+      internalID: 1733773634841944637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mail_2
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 893
+        width: 7
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47095eb799e88f3d0800000000000000
+      internalID: -3172629147622731660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mail_3
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 893
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4978b6246cdcf7ff0800000000000000
+      internalID: -36084020594112620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mail_4
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 893
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e12049aa3a465e250800000000000000
+      internalID: 5973291134881104414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mail_5
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 893
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72a8f741649279f80800000000000000
+      internalID: -8099960023834195417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mail_6
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 893
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11c42c2149babf7c0800000000000000
+      internalID: -4036443988549284847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mail_7
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 893
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bddfc9737af85bcf0800000000000000
+      internalID: -237125457011737125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mail_8
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 893
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0af7185ea4694240800000000000000
+      internalID: 4776459579768175117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mail_9
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 902
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e940ff24694cc7080800000000000000
+      internalID: -9188252990094506850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mail_10
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 896
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36eed2dc3a72c64d0800000000000000
+      internalID: -3140091255708586397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mail_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 782
+        width: 800
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16f85e8456dcd7fc0800000000000000
+      internalID: -3495411900871241887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mail_12
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 802
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e64179a2386d91b0800000000000000
+      internalID: -5648243790852307231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mail_13
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 797
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acdb7cc6d72c10850800000000000000
+      internalID: 6341563594266099146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mail_14
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 802
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a893e3d5df4314c30800000000000000
+      internalID: 4341809778557598090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mail_15
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 802
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03b0bb1cf76981770800000000000000
+      internalID: 8581774565409753904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mail_16
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 802
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e6a0ba1e9e3a8fb0800000000000000
+      internalID: -4644831216905705753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mail_17
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 802
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62178fdec3d5af680800000000000000
+      internalID: -8720555212177641178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mail_18
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 811
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dff1051113d2577d0800000000000000
+      internalID: -2921379094512787459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mail_19
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 805
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd8fd9749596bf6d0800000000000000
+      internalID: -2955652898264057636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mail_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 800
+        height: 690
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a4ff8c988d95b5b0800000000000000
+      internalID: -5353199371992173404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mail_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 331
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85b5d503b75118970800000000000000
+      internalID: 8755302769421540184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mail_22
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 0
+        width: 331
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3775550bb453c8ee0800000000000000
+      internalID: -1257571596746008717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Mail_0: 326182069040782643
+      Mail_1: 1733773634841944637
+      Mail_10: -3140091255708586397
+      Mail_11: -3495411900871241887
+      Mail_12: -5648243790852307231
+      Mail_13: 6341563594266099146
+      Mail_14: 4341809778557598090
+      Mail_15: 8581774565409753904
+      Mail_16: -4644831216905705753
+      Mail_17: -8720555212177641178
+      Mail_18: -2921379094512787459
+      Mail_19: -2955652898264057636
+      Mail_2: -3172629147622731660
+      Mail_20: -5353199371992173404
+      Mail_21: 8755302769421540184
+      Mail_22: -1257571596746008717
+      Mail_3: -36084020594112620
+      Mail_4: 5973291134881104414
+      Mail_5: -8099960023834195417
+      Mail_6: -4036443988549284847
+      Mail_7: -237125457011737125
+      Mail_8: 4776459579768175117
+      Mail_9: -9188252990094506850
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

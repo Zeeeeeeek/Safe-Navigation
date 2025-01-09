@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 6ef22d80d162861408b22b51303d9edc
+guid: a1df2bdcdda4f4f409fc89ce90306cde
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1018234015460869181
-    second: paper18_0
+      213: 674926086875641796
+    second: skull_island_scaled_5x_pngcrushed_0
+  - first:
+      213: -2562337749755649476
+    second: skull_island_scaled_5x_pngcrushed_1
+  - first:
+      213: 9027310903816416874
+    second: skull_island_scaled_5x_pngcrushed_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: paper18_0
+      name: skull_island_scaled_5x_pngcrushed_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 0
-        width: 2521
-        height: 3314
+        x: 4
+        y: 9
+        width: 152
+        height: 137
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +134,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3cb3c3ace818ed1f0800000000000000
-      internalID: -1018234015460869181
+      spriteID: 4c7fdd933b1dd5900800000000000000
+      internalID: 674926086875641796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skull_island_scaled_5x_pngcrushed_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 4
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c32ad37746fb07cd0800000000000000
+      internalID: -2562337749755649476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skull_island_scaled_5x_pngcrushed_2
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 4
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6eecf23073774d70800000000000000
+      internalID: 9027310903816416874
       vertices: []
       indices: 
       edges: []
@@ -147,8 +197,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      paper18_0: -1018234015460869181
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

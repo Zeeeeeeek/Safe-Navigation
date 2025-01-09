@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6ef22d80d162861408b22b51303d9edc
+guid: 8d2569885896c3340be8b4efd74379de
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1018234015460869181
-    second: paper18_0
+      213: 6921027673209814797
+    second: volcano_island_scaled_5x_pngcrushed_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: paper18_0
+      name: volcano_island_scaled_5x_pngcrushed_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 0
-        width: 2521
-        height: 3314
+        x: 4
+        y: 4
+        width: 152
+        height: 152
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3cb3c3ace818ed1f0800000000000000
-      internalID: -1018234015460869181
+      spriteID: d0fb156effd6c0060800000000000000
+      internalID: 6921027673209814797
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      paper18_0: -1018234015460869181
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
