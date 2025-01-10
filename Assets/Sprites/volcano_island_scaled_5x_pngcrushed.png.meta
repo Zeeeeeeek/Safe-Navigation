@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      volcano_island_scaled_5x_pngcrushed_0: 6921027673209814797
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

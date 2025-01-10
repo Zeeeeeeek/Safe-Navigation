@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hawaii_island_0: -5229471946852232940
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

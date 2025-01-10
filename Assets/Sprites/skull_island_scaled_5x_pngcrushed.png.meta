@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      skull_island_scaled_5x_pngcrushed_0: 674926086875641796
+      skull_island_scaled_5x_pngcrushed_1: -2562337749755649476
+      skull_island_scaled_5x_pngcrushed_2: 9027310903816416874
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
