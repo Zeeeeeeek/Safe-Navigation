@@ -10,7 +10,8 @@ public class GameController : MonoBehaviour
     public float minDistance = 2.0f;
     public int maxAttempts = 10;
     private readonly List<Vector2> _islandPositions = new();
-    public GameObject resourceCanvas;
+    public GameObject emailCanvas;
+    public GameObject linkCanvas;
     public GameObject endGameCanvas;
     private Answer _currentAnswer = Answer.UNKNOWN;
     private int _currentIsland = 0;
@@ -56,22 +57,25 @@ public class GameController : MonoBehaviour
     
     private void OnPlayerEnterIsland(IslandDTO islandDto)
     {
-        if (resourceCanvas.activeSelf) return;
+        if (emailCanvas.activeSelf || linkCanvas.activeSelf) return;
         if (islandDto.content.GetTypeEnum() == JsonResourcesReader.Type.Email)
         {
-            var texts = resourceCanvas.GetComponentsInChildren<TMPro.TextMeshProUGUI>();
-            texts[0].text = islandDto.content.elements[0];
-            texts[1].text = islandDto.content.elements[1];
-            texts[2].text = islandDto.content.elements[2];
+            var texts = emailCanvas.GetComponentsInChildren<TMPro.TextMeshProUGUI>();
+            for (var i = 0; i < texts.Length; i++)
+            {
+                texts[i].text = islandDto.content.elements[i];
+            }
+            emailCanvas.SetActive(true);
         }
         else
         {
-            Debug.Log($"Link {islandDto.content.GetAnswerEnum()}");
+            linkCanvas.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = islandDto.content.elements[0];
+            linkCanvas.SetActive(true);
         }
         
         var player = FindFirstObjectByType<PlayerController>();
         player.CanMove = false;
-        resourceCanvas.SetActive(true);
+        
         _currentAnswer = islandDto.content.GetAnswerEnum();
         _currentIsland = int.Parse(islandDto.islandId.Split('_')[1]);
     }
@@ -135,8 +139,14 @@ public class GameController : MonoBehaviour
 
     private void CloseCanvas()
     {
-        resourceCanvas.SetActive(false);
-        foreach (var t in resourceCanvas.GetComponentsInChildren<TMPro.TextMeshProUGUI>())
+        linkCanvas.SetActive(false);
+        emailCanvas.SetActive(false);
+        foreach (var t in emailCanvas.GetComponentsInChildren<TMPro.TextMeshProUGUI>())
+        {
+            t.text = "";
+        }
+
+        foreach (var t in linkCanvas.GetComponentsInChildren<TMPro.TextMeshProUGUI>())
         {
             t.text = "";
         }
@@ -147,7 +157,7 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && resourceCanvas.activeSelf)
+        if (Input.GetKeyDown(KeyCode.Escape) && emailCanvas.activeSelf)
         {
             CloseCanvas();
         }
