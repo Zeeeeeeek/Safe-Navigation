@@ -73,11 +73,13 @@ public class GameController : MonoBehaviour
                 healthDisplay.DecreaseHealth();
             }
             CloseCanvas();
-            var islands = FindObjectsOfType<IslandCollectible>();
+            var islands = FindObjectsByType<IslandCollectible>(FindObjectsSortMode.None);
             foreach (var island in islands)
             {
                 if (island.islandId != $"Island_{_currentIsland}") continue;
                 Destroy(island.gameObject);
+                var islandDisplay = FindFirstObjectByType<IslandDisplay>();
+                islandDisplay.DecreaseIslandCount();
                 break;
             }
         }
@@ -93,7 +95,7 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && resourceCanvas.activeSelf)
         {
             CloseCanvas();
         }
