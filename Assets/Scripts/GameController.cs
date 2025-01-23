@@ -157,9 +157,24 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && emailCanvas.activeSelf)
+        if (Input.GetKeyDown(KeyCode.Escape) && (emailCanvas.activeSelf || linkCanvas.activeSelf))
         {
             CloseCanvas();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            //Get all islands and destroy them
+            var islands = FindObjectsByType<IslandCollectible>(FindObjectsSortMode.None);
+            foreach (var island in islands)
+            {
+                Destroy(island.gameObject);
+            }
+            //Reset the island count
+            _islandPositions.Clear();
+            //Populate the positions again
+            PopulatePositions();
+            SpawnIslands();
         }
     }
 
@@ -174,8 +189,8 @@ public class GameController : MonoBehaviour
                 var x = Random.Range(-16, 17);
                 var y = Random.Range(-11, 12);
                 var pos = new Vector2(x, y);
-
-                if (!IsPositionValid(pos)) continue;
+                var playerPosition = FindFirstObjectByType<PlayerController>().transform.position;
+                if (!IsPositionValid(pos) || Vector2.Distance(pos, playerPosition) < 5.0f) continue;
                 _islandPositions.Add(pos);
                 placed = true;
                 break;
@@ -198,4 +213,5 @@ public class GameController : MonoBehaviour
         var hp = FindFirstObjectByType<HealthDisplay>().health;
         Debug.Log($"Setting score to {hp*100/islandCount}");
     }
+    
 }
