@@ -5,13 +5,13 @@ using Random = UnityEngine.Random;
 
 public class GameController : MonoBehaviour
 {
-    //public GameObject islandPrefab;
     public GameObject[] islandPrefabs;
     public int islandCount;
     public float minDistance = 2.0f;
     public int maxAttempts = 10;
     private readonly List<Vector2> _islandPositions = new();
     public GameObject resourceCanvas;
+    public GameObject endGameCanvas;
     private Answer _currentAnswer = Answer.UNKNOWN;
     private int _currentIsland = 0;
     
@@ -29,12 +29,10 @@ public class GameController : MonoBehaviour
             var island = Instantiate(islandPrefab, _islandPositions[i], Quaternion.identity);
 
             var collectible = island.GetComponent<IslandCollectible>();
-            if (collectible != null)
-            {
-                collectible.islandId = $"Island_{i + 1}";
-                collectible.onPlayerEnter.AddListener(OnPlayerEnterIsland);
-                collectible.answer = Answer.SAFE;
-            }
+            if (collectible == null) continue;
+            collectible.islandId = $"Island_{i + 1}";
+            collectible.onPlayerEnter.AddListener(OnPlayerEnterIsland);
+            collectible.answer = Answer.SAFE;
         }
     }
     
@@ -83,9 +81,29 @@ public class GameController : MonoBehaviour
                 islandDisplay.DecreaseIslandCount();
                 break;
             }
+            CheckForEndGame();
         }
     }
-    
+
+    private void CheckForEndGame()
+    {
+        var islands = FindFirstObjectByType<IslandDisplay>().islandCount;
+        var hp = FindFirstObjectByType<HealthDisplay>().health;
+        if (hp == 0)
+        {
+            Debug.Log("Game Over");
+        }
+        else if (islands == 0)
+        {
+            endGameCanvas.SetActive(true);
+            var player = FindFirstObjectByType<PlayerController>();
+            player.CanMove = false;
+            endGameCanvas.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = 
+                hp * 100/islandCount >= 60 ? "Hai vinto!" : "Hai perso!";
+        }
+        
+    }
+
     private void CloseCanvas()
     {
         resourceCanvas.SetActive(false);
@@ -130,5 +148,11 @@ public class GameController : MonoBehaviour
     private bool IsPositionValid(Vector2 newPos)
     {
         return newPos != Vector2.zero && _islandPositions.All(pos => !(Vector2.Distance(pos, newPos) < minDistance));
+    }
+
+    public void onClickEndButton()
+    {
+        var hp = FindFirstObjectByType<HealthDisplay>().health;
+        Debug.Log($"Setting score to {hp*100/islandCount}");
     }
 }
