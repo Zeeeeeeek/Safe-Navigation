@@ -16,16 +16,11 @@ public class HealthDisplay : MonoBehaviour
         healthText.text = $"{health}";
     }
 
-    private void DecreaseHealth()
+    public void DecreaseHealth()
     {
         if (health <= 0) return;
         health--;
         UpdateText();
     }
 
-    public void Update()
-    {
-        if (!Input.GetKeyDown(KeyCode.Space)) return;
-        DecreaseHealth();
-    }
 }

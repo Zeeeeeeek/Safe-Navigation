@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -12,6 +11,7 @@ public class GameController : MonoBehaviour
     public int maxAttempts = 10;
     private readonly List<Vector2> _islandPositions = new();
     public GameObject resourceCanvas;
+    private Answer _currentAnswer = Answer.UNKNOWN;
     
     private void Start()
     {
@@ -31,27 +31,62 @@ public class GameController : MonoBehaviour
             {
                 collectible.islandId = $"Island_{i + 1}";
                 collectible.onPlayerEnter.AddListener(OnPlayerEnterIsland);
+                collectible.answer = Answer.SAFE;
             }
         }
     }
     
-    private void OnPlayerEnterIsland(string islandId)
+    private void OnPlayerEnterIsland(IslandDTO islandDto)
     {
         if (resourceCanvas.activeSelf) return;
-        Debug.Log($"Evento ricevuto: giocatore è entrato nell'isola con ID: {islandId}");
         resourceCanvas.SetActive(true);
-        resourceCanvas.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = islandId;
+        resourceCanvas.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = islandDto.islandId;
         var player = FindFirstObjectByType<PlayerController>();
         player.CanMove = false;
+        _currentAnswer = islandDto.answer;
+    }
+    
+    public void SafeAnswer()
+    {
+        SubmitAnswer(Answer.SAFE);
+    }
+
+    public void SpamAnswer()
+    {
+        SubmitAnswer(Answer.SPAM);
+    }
+    
+    private void SubmitAnswer(Answer answer)
+    {
+        if (_currentAnswer == Answer.UNKNOWN)
+        {
+            Debug.Log("No current answer set");
+        }
+        else
+        {
+
+            if (_currentAnswer != answer)
+            {
+                var healthDisplay = FindFirstObjectByType<HealthDisplay>();
+                healthDisplay.DecreaseHealth();
+            }
+            CloseCanvas();
+        }
+    }
+    
+    private void CloseCanvas()
+    {
+        resourceCanvas.SetActive(false);
+        var player = FindFirstObjectByType<PlayerController>();
+        player.CanMove = true;
+        _currentAnswer = Answer.UNKNOWN;
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            resourceCanvas.SetActive(false);
-            var player = FindFirstObjectByType<PlayerController>();
-            player.CanMove = true;
+            CloseCanvas();
         }
     }
 
