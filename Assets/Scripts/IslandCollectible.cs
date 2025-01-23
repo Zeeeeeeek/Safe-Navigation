@@ -15,9 +15,6 @@ public class IslandCollectible : MonoBehaviour
     {
         if (!other.CompareTag("Player")) return;
 
-        #if !UNITY_EDITOR && UNITY_WEBGL
-            SetScore(1000);
-        #endif
         onPlayerEnter?.Invoke(new IslandDTO(islandId, answer, content));
     }
 }
