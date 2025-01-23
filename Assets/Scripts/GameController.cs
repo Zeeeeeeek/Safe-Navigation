@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -17,6 +18,9 @@ public class GameController : MonoBehaviour
     private int _currentIsland = 0;
     
     private List<JsonResourcesReader.Content> _resources;
+    
+    [DllImport("__Internal")]
+    private static extern void SetFinalScore(int points);
     
     private void Start()
     {
@@ -196,7 +200,12 @@ public class GameController : MonoBehaviour
     public void onClickEndButton()
     {
         var hp = FindFirstObjectByType<HealthDisplay>().health;
-        Debug.Log($"Setting score to {hp*100/islandCount}");
+        var mark = hp * 100 / islandCount;
+#if !UNITY_EDITOR && UNITY_WEBGL
+        SetFinalScore(mark);
+#else
+        Debug.Log($"Il tuo punteggio è {mark}");
+#endif
     }
     
 }
