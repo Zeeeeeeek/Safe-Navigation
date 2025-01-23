@@ -15,10 +15,26 @@ public class GameController : MonoBehaviour
     private Answer _currentAnswer = Answer.UNKNOWN;
     private int _currentIsland = 0;
     
+    private List<JsonResourcesReader.Content> _resources;
+    
     private void Start()
     {
-        PopulatePositions();
-        SpawnIslands();
+        var jsonReader = new JsonResourcesReader();
+
+        StartCoroutine(jsonReader.ReadResources(resources =>
+        {
+            _resources = resources.OrderBy(x => Random.value).ToList();
+            if (_resources.Count > 0)
+            {
+                PopulatePositions();
+                SpawnIslands();
+            }
+            else
+            {
+                Debug.LogError("No resources were loaded. Check the JSON file.");
+            }
+        }));
+        
     }
 
     private void SpawnIslands()
@@ -29,21 +45,34 @@ public class GameController : MonoBehaviour
             var island = Instantiate(islandPrefab, _islandPositions[i], Quaternion.identity);
 
             var collectible = island.GetComponent<IslandCollectible>();
+            var resource = _resources[i];
             if (collectible == null) continue;
             collectible.islandId = $"Island_{i + 1}";
             collectible.onPlayerEnter.AddListener(OnPlayerEnterIsland);
-            collectible.answer = Answer.SAFE;
+            collectible.answer = resource.GetAnswerEnum();
+            collectible.content = resource;
         }
     }
     
     private void OnPlayerEnterIsland(IslandDTO islandDto)
     {
         if (resourceCanvas.activeSelf) return;
-        resourceCanvas.SetActive(true);
-        resourceCanvas.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = islandDto.islandId;
+        if (islandDto.content.GetTypeEnum() == JsonResourcesReader.Type.Email)
+        {
+            var texts = resourceCanvas.GetComponentsInChildren<TMPro.TextMeshProUGUI>();
+            texts[0].text = islandDto.content.elements[0];
+            texts[1].text = islandDto.content.elements[1];
+            texts[2].text = islandDto.content.elements[2];
+        }
+        else
+        {
+            Debug.Log($"Link {islandDto.content.GetAnswerEnum()}");
+        }
+        
         var player = FindFirstObjectByType<PlayerController>();
         player.CanMove = false;
-        _currentAnswer = islandDto.answer;
+        resourceCanvas.SetActive(true);
+        _currentAnswer = islandDto.content.GetAnswerEnum();
         _currentIsland = int.Parse(islandDto.islandId.Split('_')[1]);
     }
     
@@ -107,6 +136,10 @@ public class GameController : MonoBehaviour
     private void CloseCanvas()
     {
         resourceCanvas.SetActive(false);
+        foreach (var t in resourceCanvas.GetComponentsInChildren<TMPro.TextMeshProUGUI>())
+        {
+            t.text = "";
+        }
         var player = FindFirstObjectByType<PlayerController>();
         player.CanMove = true;
         _currentAnswer = Answer.UNKNOWN;

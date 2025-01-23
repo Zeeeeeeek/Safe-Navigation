@@ -1,4 +1,3 @@
-using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -10,8 +9,7 @@ public class IslandCollectible : MonoBehaviour
     public string islandId;
     public IslandEnterEvent onPlayerEnter;
     public Answer answer;
-    [DllImport("__Internal")]
-    private static extern void SetScore(int score);
+    public JsonResourcesReader.Content content;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -20,6 +18,6 @@ public class IslandCollectible : MonoBehaviour
         #if !UNITY_EDITOR && UNITY_WEBGL
             SetScore(1000);
         #endif
-        onPlayerEnter?.Invoke(new IslandDTO(islandId, answer));
+        onPlayerEnter?.Invoke(new IslandDTO(islandId, answer, content));
     }
 }

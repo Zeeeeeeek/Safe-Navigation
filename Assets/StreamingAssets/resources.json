@@ -1,0 +1,78 @@
+[
+  {
+    "type": "Email",
+    "elements": [
+      "order-update@amazon.it",
+      "Ordine #527-4593391-7832456 spedito",
+      "Il tuo pacco è stato spedito! Il tuo ordine è stato spedito e arriverà presto. Visualizza i dettagli dell'ordine sul link sottostante."
+    ],
+    "answer": "SAFE"
+  },
+  {
+    "type": "Email",
+    "elements": [
+      "alert@sicurezza-apple.com",
+      "Il tuo ID Apple è stato bloccato",
+      "Per sbloccare il tuo account, verifica immediatamente i tuoi dati cliccando sul link sottostante."
+    ],
+    "answer": "SPAM"
+  },
+  {
+    "type": "Email",
+    "elements": [
+      "DHL oJiSKDVx@lkxszqo.us",
+      "Hai (1) messaggio da parte nostra.",
+      "CONSEGNA DEL PACCO SOSPESO!\nStatus: imposta doganale in attesa\nPer favore, clicca qui per risolvere il problema."
+    ],
+    "answer": "SPAM"
+  },
+  {
+    "type": "Email",
+    "elements": [
+      "order-update@amzon.it",
+      "Ordine #527-4593391-7832456 spedito",
+      "Il tuo pacco è stato spedito! Il tuo ordine è stato spedito e arriverà presto. Visualizza i dettagli dell'ordine sul link sottostante."
+    ],
+    "answer": "SPAM"
+  },
+  {
+    "type": "Email",
+    "elements": [
+      "news@linkedin.com",
+      "Nuove opportunità per te",
+      "Abbiamo trovato nuove offerte di lavoro che potrebbero interessarti. Accedi al link per scoprirle!"
+    ],
+    "answer": "SAFE"
+  },
+  {
+    "type": "Link",
+    "elements": [
+      "https://www.ebay.com/"
+    ],
+    "answer": "SAFE"
+  },{
+  "type": "Link",
+  "elements": [
+    "http://www.banca.it/"
+  ],
+  "answer": "SPAM"
+},{
+  "type": "Link",
+  "elements": [
+    "https://f4cebook.com"
+  ],
+  "answer": "SPAM"
+},{
+  "type": "Link",
+  "elements": [
+    "https://www.bbc.com/"
+  ],
+  "answer": "SAFE"
+},{
+  "type": "Link",
+  "elements": [
+    "https://www.youtube.com/"
+  ],
+  "answer": "SPAM"
+}
+]
