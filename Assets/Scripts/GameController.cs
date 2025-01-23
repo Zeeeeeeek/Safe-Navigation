@@ -5,7 +5,8 @@ using Random = UnityEngine.Random;
 
 public class GameController : MonoBehaviour
 {
-    public GameObject islandPrefab;
+    //public GameObject islandPrefab;
+    public GameObject[] islandPrefabs;
     public int islandCount;
     public float minDistance = 2.0f;
     public int maxAttempts = 10;
@@ -24,7 +25,7 @@ public class GameController : MonoBehaviour
     {
         for (var i = 0; i < _islandPositions.Count; i++)
         {
-
+            var islandPrefab = islandPrefabs[Random.Range(0, islandPrefabs.Length)];
             var island = Instantiate(islandPrefab, _islandPositions[i], Quaternion.identity);
 
             var collectible = island.GetComponent<IslandCollectible>();
