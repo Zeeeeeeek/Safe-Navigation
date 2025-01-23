@@ -161,21 +161,6 @@ public class GameController : MonoBehaviour
         {
             CloseCanvas();
         }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            //Get all islands and destroy them
-            var islands = FindObjectsByType<IslandCollectible>(FindObjectsSortMode.None);
-            foreach (var island in islands)
-            {
-                Destroy(island.gameObject);
-            }
-            //Reset the island count
-            _islandPositions.Clear();
-            //Populate the positions again
-            PopulatePositions();
-            SpawnIslands();
-        }
     }
 
 
