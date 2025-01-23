@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour
     private readonly List<Vector2> _islandPositions = new();
     public GameObject resourceCanvas;
     private Answer _currentAnswer = Answer.UNKNOWN;
+    private int _currentIsland = 0;
     
     private void Start()
     {
@@ -44,6 +45,7 @@ public class GameController : MonoBehaviour
         var player = FindFirstObjectByType<PlayerController>();
         player.CanMove = false;
         _currentAnswer = islandDto.answer;
+        _currentIsland = int.Parse(islandDto.islandId.Split('_')[1]);
     }
     
     public void SafeAnswer()
@@ -71,6 +73,13 @@ public class GameController : MonoBehaviour
                 healthDisplay.DecreaseHealth();
             }
             CloseCanvas();
+            var islands = FindObjectsOfType<IslandCollectible>();
+            foreach (var island in islands)
+            {
+                if (island.islandId != $"Island_{_currentIsland}") continue;
+                Destroy(island.gameObject);
+                break;
+            }
         }
     }
     
